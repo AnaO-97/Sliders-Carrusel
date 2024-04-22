@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #332f2f;
+}
+
+.title{
+    padding-top: 50px;
+    
+    text-align: center;
+    font-size: 40px;
+}
+
+.slider-Box{
+    width: 600px;
+    height: auto;
+    margin: 50px auto 0;
+
+    overflow: hidden;
+    /* border: solid 2px red; */
+}
+
+.slider-Box ul{
+    padding: 0;
+    width: 1000%; /* depende de la cantidad de imágenes por 100  en este caso 10*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    
+    animation: slide 18s infinite alternate ease-in-out;
+    /* border: solid 2px yellow; */
+}
+
+@keyframes slide { /* salta cada 100 porque el ancho de li es 100% */
+    0%   { margin-left: 0; }
+    10%  { margin-left: 0; }
+
+    15%  { margin-left: -100%; } 
+    20%  { margin-left: -100%; }
+
+    25%  { margin-left: -200%; }
+    30%  { margin-left: -200%; }
+
+    35%  { margin-left: -300%; }
+    40%  { margin-left: -300%; }
+
+    45%  { margin-left: -400%; }
+    50%  { margin-left: -400%; }
+
+    55%  { margin-left: -500%; }
+    60%  { margin-left: -500%; }
+
+    65%  { margin-left: -600%; }
+    70%  { margin-left: -600%; }
+
+    75%  { margin-left: -700%; }
+    80%  { margin-left: -700%; }
+
+    85%  { margin-left: -800%; }
+    90%  { margin-left: -800%; }
+
+    95%  { margin-left: -900%; }
+    100% { margin-left: -900%; }
+}
+
+.slider-Box ul li{
+    position: relative;
+    width: 100%; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    list-style: none;
+    /* border: solid 2px green */
+}
+
+.slider-Box  ul li img{
+    width: 90%;
+    height: 400px;   
+}
+
+.slider-Box ul li .texto{
+    position: absolute;
+    top: 10px;    
+    padding: 0 250px;
+    
+    color: black;
+    text-align: center;
+}
+
+.slider-Box ul li .texto h2{
+    margin-bottom: 35px;
+    width: 200px;
+
+    backdrop-filter: blur(20px);
+    
+    font-size: 45px;
+}
+
+.slider-Box ul li .texto p{
+    backdrop-filter: blur(20px);
+}
